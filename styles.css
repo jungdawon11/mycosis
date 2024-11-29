@@ -1,0 +1,261 @@
+html, body {
+    height: 100%; /* 전체 화면 높이를 채우도록 설정 */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    background-color: black;
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.mold-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 0; /* 하단에 위치하도록 z-index 설정 */
+    position: absolute; /* z-index가 적용되도록 position 설정 */
+}
+
+#moldCanvas {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1; /* canvas는 위에 오도록 z-index 설정 */
+}
+
+#container {
+    width: 100%; /* 컨테이너 너비 조정 */
+    height: 100%; /* 컨테이너 높이 조정 */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    flex-direction: column; /* 자식 요소들을 세로로 쌓기 */
+}
+
+.object {
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#typing-area {
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    top: 88%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border:none;
+}
+
+input[type="text"] {
+    width: 90%; /* 원하는 너비로 설정 */
+    background-color: rgba(255, 255, 255, 0.119);
+    padding: 5px;
+    border-radius: 25px; /* 모서리를 둥글게 만듦 */
+    text-align: center;
+    outline: none;
+    text-align: left;
+    padding: 7px 10px;
+    font-size: 13px;
+    border:none;
+    font-weight: 500;
+    caret-color:#A7A6A2;
+    color:rgba(255, 255, 255, 0.23);
+}
+
+input[type="text"]::placeholder {
+    color:rgba(146, 146, 146, 0.625);
+}
+
+input[type="text"]:focus::placeholder {
+    opacity: 0; /* 포커스 시 placeholder 투명하게 */
+}
+
+p {
+    color: #A7A6A2;
+    left: 50%;
+    font-size: 12.7px;
+    font-weight: 700;
+}
+
+.time-container {
+    color: white;
+    z-index: 4;
+    position: fixed;
+    top: 10%;
+    text-align: center;
+    opacity: 50%;
+    line-height: 90px;
+}
+
+.date {
+    font-size: 2.3rem; /* 날짜 글자 크기 */
+    font-weight: 500;
+}
+.time {
+    font-size: 7rem; /* 시간 글자 크기 */
+    font-weight: 700;
+}
+
+.captcha-container {
+    width: 300px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    position: absolute; /* 위치를 절대적으로 설정 */
+    top: 55%; /* 상단에서 50% 위치 */
+    left: 50%; /* 왼쪽에서 50% 위치 */
+    transform: translate(-50%, -50%); /* 요소의 중앙을 기준으로 이동 */
+}
+
+.instruction {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 14px;
+    color: #333;
+    font-family:"American Typewriter";
+    font-weight: 500;
+}
+
+.captcha-image {
+    background-color: #E1E6EA;
+    border: 1px solid #d4d4d4;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.captcha-text {
+    font-family: "Comic Sans MS", cursive;
+    color: #000000;
+}
+
+.captcha-text .rotate {
+    transform: rotate(15deg);
+    display: inline-block;
+    font-family: "Nanum Myeongjo", serif;
+}
+
+.captcha-text .skew {
+    transform: skewX(-10deg);
+    display: inline-block;
+}
+
+.answer-container {
+    margin-bottom: 15px;
+}
+
+.answer-container label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #000000;
+    font-family:"American Typewriter";
+    font-weight: 500;
+    font-stretch: condensed;
+}
+
+.eng {
+    font-family:"American Typewriter";
+    font-weight: 500;
+}
+
+.answer-container input {
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 14px;
+    border: 1px solid #E1E6EA;
+    border-radius: 3px;
+    color: #b5babd;
+}
+
+.answer-container *:lang(kr) {
+    font-family: "Nanum Myeongjo", serif;
+}
+
+.solve-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.solve-footer .solve-text {
+    font-weight: bold;
+    color: #8d9ba9;
+    font-family:"American Typewriter";
+}
+
+.korean-text {
+    font-family: "Nanum Myeongjo", serif;
+}
+
+
+.captcha-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #0073e6;
+    padding: 0;
+}
+
+.captcha-controls button:hover {
+    color: #005bb5;
+}
+
+.captcha-text.rotate {
+    transform: rotate(10deg);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.captcha-added-image {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute; /* 이미지 위치를 절대 위치로 설정 */
+    top: 0;
+    width: 100%; /* 캡차 영역을 덮도록 이미지 크기 설정 */
+    height: 100%;
+    opacity: 8%; /* 원하는 투명도 설정 */
+    scale: 1.5;
+}
+
+.captcha-image {
+    position: relative; /* 부모 요소를 상대 위치로 설정 */
+}
+
+@font-face {
+    font-family: "American Typewriter";
+    src: url("American Typewriter.ttc") format("ttc");
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Nanum+Myeongjo&display=swap');
+
+  .nanum-myeongjo-regular {
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

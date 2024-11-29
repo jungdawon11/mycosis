@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mycosis</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sunflower:500" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="fullscreen-bg" ></div> <!-- 전체 화면을 채울 div -->
+    <div class="notification" id="chromeNotification">
+      <div class="icon"> <img src="mycosis_symbol_1.svg" style="width:50px;"> </div> <br>
+      <h2><span class="captcha-text">예<span class="rotate">°상치</span>못한<span class="skew">접근</span>입˛<span class="rotate">니</span>다.</span></h2>
+        본 기기는 Mycosis 입국 후보 <br> 명단자만 이용할 수 있습니다.<br>
+        내용이 유출되지 않도록 <br> 비밀 유지에 주의해주시길 바랍니다. <br> <br> 
+      <button class="btn" id="confirmButton" onclick="hideBackground()">확인했습니다.</button> <br>
+      <div class="small"> 버튼을 누르는 즉시, 사용자(<div class="showData"></div>, 59.237.162.148)은 마이코시스의 일원이 되는 것에 동의하게 됩니다.</div>
+    </div>
+    
+
+    
+
+  <div class="right-slide">
+
+    <div class="siri shadow">
+
+    </div>
+    
+    <div class="alam shadow" style="display: none;">
+      <div class="icon"> <img src="jul17.png" style="width:40px; height:40px";> </div>
+      <div class="aline">
+      <div class="name">오늘</div>
+      <div class="talk">하루종일</div>
+     </div>
+    </div>
+
+    <div class="alam shadow" style="display: none;">
+      <div class="icon"> <img src="mail.png" style="width:40px; height:40px";> </div>
+      <div class="aline">
+      <div class="name"> public_NASA@nasa.gov.</div>
+      <div class="talk"> Hello, this is NASA’s official <br> support reception. I’m contacting you ...</div>
+    </div>
+    </div>
+
+    <div class="alam shadow" style="display: none;">
+      <div class="icon"> <img src="mycosis_app.png" style="width:40px; height:40px";> </div>
+      <div class="aline">
+      <div class="name">
+        waiting@kbs.co.kr 
+      </div> 
+      <span style="opacity: 30%;"> 
+        12분 전
+      </span>
+
+      <div class="talk">안녕하세요, <span class="showData"></span>님 끊임없는 경쟁, 스트레스, 그리고<br> 갈등에서 벗어나고 싶으신가요? 모든 이가 진정으로 <br>평등하며 조화와 평화가 일상이 된 세상을 상상해보<br>세요. 바로 마이코시스 공화국에서 가능해진 이...</div>
+      </div>
+    </div>
+    
+    <div class="alam shadow">
+      <div class="icon"> <img src="jul17.png" style="width:40px; height:40px";> </div>
+      <div class="aline">
+      <div class="name">마이코시스 이주 신청 기간</div>
+
+      <div class="talk">하루종일</div>
+     </div>
+    </div>
+    
+    <div class="alam shadow">
+      <div class="icon"> <img src="mail.png" style="width:40px; height:40px";> </div>
+      <div>
+      <div class="aline" style="display: flex;">
+      <div class="name" style="width: 90%;"> public_Dr.Equal@SEAN.kr</div>
+      <span style="opacity: 30%; font-size: 12px; width: 50%; text-align: right;"> 
+        3분 전
+      </span>
+    </div>
+    <div class="talk"> 첨부파일 1개 <br> 파일을 참고하시어 입국 신청 전 숨겨진 주의사항 ...</div>
+    </div>
+  </div>
+    <div class="alam shadow">
+      <div class="icon"> <img src="mycosis_app.png" style="width:40px; height:40px";> </div>
+      <div>
+      <div class="aline" style="display: flex;">
+      <div class="name" style="width: 90%;">Mycosismaketing@osis.kr </div>
+      <span style="opacity: 30%; font-size: 12px; width: 50%; text-align: right;"> 
+        12분 전
+      </span>
+    </div>
+      <div class="talk">안녕하세요, <span class="showData"></span>님 끊임없는 경쟁, 스트레스, 그리고<br> 갈등에서 벗어나고 싶으신가요? 모든 이가 진정으로 <br>평등하며 조화와 평화가 일상이 된 세상을 상상해보<br>세요. 바로 마이코시스 공화국에서 가능해진 이...</div>
+      </div>
+    </div>
+    </div>
+  
+  <div class="imessage shadow">
+      <div class="chat-container">
+        <div class="chat-list">
+          <div class="buttons" style="padding-right: 0;"><div id="plus">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          </div>
+          <div class="search"> </div>
+          <div class="chat-aline">
+          <div class="chat select "><img class="picture" src="profil.svg"><div class="name"></div></div>
+          <div class="chat unselect animation-received"><img class="picture" src="profil.svg"><div class="name"></div></div>
+
+          <div class="chat unselect animation-received"><img class="picture" src="profil.svg"><div class="name"></div></div>
+
+          <div class="chat unselect animation-received"><img class="picture" src="profil.svg"><div class="name"></div></div>
+          
+          <div class="chat unselect animation-received"><img class="picture" src="profil.svg"><div class="name"></div></div>
+        </div>
+        </div>
+        <div class="chat-window">
+          <div class="profile">
+            <div class="grey">받는 사람:ㅤ</div>
+            <div id="number">
+            +82 10-6666-6666</div></div>
+         
+          <div class="today"> iMessage <br> <div class="date-time" id="date-time"></div> </div>
+          <div class="message-aline">
+          <div class="animation-jiwon">
+           <div class="message-bubble received">요즘 생각이라는 걸 하기가 싫더라</div>
+          </div>
+          <div class="animation-jiwon">
+           <div class="message-bubble received">사회 문제나 뭐 그런거? 사실 잘 모르겠어</div>
+           </div>
+           <div class="animation-jiwon">
+            <div class="message-bubble received">나한테 피해만 없으면 되지 ㅋㅋㅋ<br></div>
+            </div>
+            <div class="animation-jiwon">
+              <div class="message-bubble received">야, 마이코시스 들어봤어?<br></div>
+              </div>
+              <div class="animation-jiwon">
+                <div class="message-bubble received">여기는 불평등, 갈등 같은 건 싹 사라지고 안전하대<br></div>
+                </div>
+                <div class="animation-jiwon">
+                  <div class="message-bubble received">부정적인 글들 보는 것도 지치는데<br></div>
+                  </div>   
+                  <div class="animation-jiwon">
+                    <div class="message-bubble received">같이 신청해볼래?<br></div>
+                    </div>
+                    <div class="animation-jiwon">
+                      <div class="message-bubble received" style="padding: 15px 40px 15px 9px;"><img src="text.png" style="width: 55px; margin-right: 10px;"> <span style="line-height: 15px;"><span style="font-weight: 500;">readme.txt</span><br><span style="font-size: 10px; opacity: 60%;">476KB</span></span>
+                      </div>
+                      </div>
+        </div>
+        <div class="bottom">
+          <div class="keyboard" style="text-align: left;">iMessage</div><img class="smile" src="smile.svg"></div>
+        </div>
+        </div>
+      </div>
+      <div id="animationContainer"></div>
+    </div>
+
+    
+  
+
+  <!-- 팝업창 --> 
+  <div id='one' class="chrome-window shadow">
+    <div class="popup">
+    <div class="top-bar">
+      <div class="buttons">
+        <div class="close-button"></div>
+        <div class="minimize-button"></div>
+        <div class="maximize-button"></div>
+      </div>
+      <div class="address-bar">https://www.instagra...</div>
+    </div>
+    <!-- 내용 --> 
+    <div class="content st2">
+      <span style="font-size: 15px; font-weight: 1000;">⦁ mycosis_is_best_world <span style="opacity: 85%; font-size: 13px;">ㆍ 1분 전</span></span><br><br>
+      <img src="selfy.webp">
+      <b style="font-size:13px; font-weight: 1000;">mycosis_is_best_world</b>
+      <span style="font-size: 13px; font-weight: 100;">
+      너희들은 사회와 <br>사람들 사이 생각을 나누는 대화에 피로감을 느낀 적 없어? 와, 여긴 진짜 신세계!🙌 마이코시스에서는 모든 게 너무 쉬워. 걱정 없이 안전 보장도 해주고, 다들 한 가족 같은 분위기랄까? 혼자 있어도 절대 외롭지 않게 나를 지켜주는 느낌! 완벽한 세상 찾는 사람, 꼭 와봐👍 <b style="color: #D9E2E6;">#안전 #평등 #마이코시스</b> </span><br>
+      <span style="opacity: 80%; font-size: 12px; font-weight: 300;">댓글달기...</span>
+      <hr id="littlemargin">
+      <span style="font-size: 15px; font-weight: 1000;">⦁ mycosis_is_best_world <span style="opacity: 85%; font-size: 13px;">ㆍ 5분 전</span></span>
+    </div>
+  </div>
+  </div>
+
+  <div id='two' class="chrome-window shadow">
+    <div class="popup">
+    <div class="top-bar">
+      <div class="buttons">
+        <div class="close-button"></div>
+        <div class="minimize-button"></div>
+        <div class="maximize-button"></div>
+      </div>
+      <div class="address-bar">https://blog.naver.com</div>
+    </div>
+
+    <!-- 내용 --> 
+    <div class="content st4" style="padding: 20px 30px;">
+    <p style="font-size: 15px; opacity: 40%; margin-top: 0">게시판</p>
+    <b style="font-size:28px;margin-bottom: 10px;">용기내어 한 걸음</b> <br>
+    <span style=" font-size: 13px;"> Egomylife <span style="opacity: 40%;">ㆍ2024. 11. 14. 22:54 </span></span>
+        <hr style="margin-top: 15px; margin-bottom:15px; width:100%;"> 
+        <p style="border-left: solid black 2px; padding-left: 15px; font-style: italic;">
+        갈등과 대립은 사회의 균형을 잡아주는 중요한 역할을 한다. 서로 다른 의견과 관점이 부딪히며 우리는 그 과정에서 문제의 진짜 원인을 찾고, 개선의 길을 모색하게 된다. <br>이 갈등이야말로 변화의 동력이자, 진정한 평등을 향해 나아가는 발판이다.
+        <p style="margin-bottom: 0;">변화의 필요성을 느끼지 않는 세상에서는 성장이 불가능하다. <br>갈등 없는 완벽한 평화는 어쩌면 무의미한 반복의 연속일지도 모른다.</p>
+      </p>
+    </div>
+    </div>
+    </div>
+
+    <div id='three' class="chrome-window shadow">
+    <div class="popup">
+        <div class="top-bar">
+          <div class="buttons">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          <div class="address-bar">https://Thum...</div>
+        </div>
+
+        <!-- 내용 --> 
+        <div class="content st3">
+          <div class="gif"> <img src="mycosis_mp4.gif"> </div>
+        </div>
+      </div>
+    </div>
+
+    <div id='four' class="chrome-window shadow">
+      <div class="popup">
+        <div class="top-bar">
+          <div class="buttons">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          <div class="address-bar">https://www.welcome.to.paradais/</div>
+        </div>
+
+        <!-- 내용 --> 
+        <div class="contentleft st4">
+            <h1 class="eng shadow-stroked-text" style="text-align: center; font-size: 55px; margin-bottom:10px; margin-top: 0;"> 
+              <span class="captcha-text">PAR<span class="rotate"style="font-family: American Typewriter;>°A</span>DA<span class="skew">iS</span><br>M˛<span class="rotate" style="font-family: American Typewriter;">YCO</span>SIS!</span>
+            </h1>
+          <img src="text_logo.svg" style="height:120px;">
+          <img src="mycosis_symbol.svg" 
+          style="height:330px; opacity: 10%; position: fixed; z-index: 1; margin-top: 22%; left: 0%;">
+          <br>
+          <p class="blink" 
+          style="text-emphasis-style : filled; text-align: center; font-weight: 1000; font-size: 20px;" >
+            차별 없는 평등의 사회, <br>마이코시스에 오신 것을 환영합니다. 
+          </p>
+          <div style="line-height:22px;">
+          우리 사회는 모든 배경과 외모, 능력을 초월하여 모든 사람을 공평하게 대우합니다. 
+          <b>
+            더 이상 불필요한 경쟁과 비교는 필요 없습니다. 
+          </b>
+          마이코시스에서 진정한 평온을 만끽해 보세요. <br> </div>
+          <p style="font-family: American Typewriter; font-weight: 300;">
+             ㅤWelcome to Mycosis, a society of equality without discrimination. Here, we treat everyone fairly, transcending all backgrounds, appearances, and abilities. 
+             <b style="font-weight: 400;">
+              There's no need for unnecessary competition or comparison anymore. 
+            </b>
+            Experience true serenity in Mycosis.
+          </p>
+      </div>
+      </div>
+      </div>
+      </div>
+
+
+    <div id='five' class="chrome-window shadow">
+      <div class="popup">
+        <div class="top-bar">
+          <div class="buttons">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          <div class="address-bar">https://guinness.com</div>
+        </div>
+
+
+
+
+
+        <!-- 내용 --> 
+        <div class="content st1">
+          <h2 style="font-style: italic; font-weight: 1000; font-size: 33px;">
+            <div id="currentDate"></div> 
+            갈등 없는 평화로운 일상,☀☁<br>  
+            마이코시스가 <br>선사합니다!⛿
+          </h2>
+          <hr id="littlemargin">
+          <a href="#2" style="background-color:#D9E2E6; font-size: 31px; font-weight: 1000; letter-spacing: -2.7px;"> 
+            https://arrival-card.com
+          </a>
+          <p style="text-decoration: underline; color: white;">
+            입국신청서를 작성하고, 마이코시스의 일원이 되어보세요. 
+          </p> 
+          <img src="real_selfy.png">
+        </div>
+      </div>
+      </div>
+      
+        <div id='six' class="chrome-window shadow">
+          <div class="popup">
+          <div class="top-bar">
+            <div class="buttons">
+              <div class="close-button"></div>
+              <div class="minimize-button"></div>
+              <div class="maximize-button"></div>
+            </div>
+            <div class="address-bar">https://Welcome_Cautions.com</div>
+          </div>
+
+          
+
+          <!-- 내용 --> 
+          <div class="content st6" style="padding:30px;">
+            <h2 style="background-color: #000000; color: #D9E2E6;">행복해야 마땅한 <div class="showData"></div> 님께 <br></h2>
+            <p style="line-height: 23px; font-size: 13px;">
+               꿈꾸던 완벽한 평등과 평화의 세상, 마이코시스에 입국할 기회가 열렸습니다. 스스로의 불안과 고통에서 벗어나 안전하고 보호된 일상을 맞이할 시간입니다. <br><br>
+
+              <b style="font-style: italic;">입국 신청은 간단합니다.</b><br>
+              *. 입국 신청서에 간단한 정보를 작성하세요.<br>
+              **. 신청 마감일 전에 모든 제출 절차를 완료해 주세요.<br>
+              ***. 선별 과정을 통해 마이코시스에서의 삶을 시작할 기회를 얻게 될 것입니다.<br>
+          
+              <p style="letter-spacing: -2px; -webkit-text-stroke: 2px black; text-align: center;"> 당신을 기다리고 있습니다. 완벽한 새로운 삶은 바로 눈앞. </p>
+            </p>
+
+            <span id="counter" style="color:#D9E2E6; background-color: #000000; font-size: 50px; font-family: American Typewriter; font-weight: 700; border: solid black 10px; border-radius: 15px; margin-left: 36.5%;"></span>
+              <p style="opacity: 40%; font-size: 11px; text-align: center; margin: 0;">
+                <br>이주할 수 있는 마지막 기회! 놓치지 말고 신청하세요.
+              </p>
+          </div>
+        </div>
+      </div>
+
+        <div id='seven' class="chrome-window shadow">
+          <div class="popup">
+          <div class="top-bar">
+            <div class="buttons">
+              <div class="close-button"></div>
+              <div class="minimize-button"></div>
+              <div class="maximize-button"></div>
+            </div>
+            <div class="address-bar">https://twitter.com/getoutofmym...</div>
+          </div>
+          
+          <!-- 내용 --> 
+          <div class="content st7" style="padding: 20px;">
+            <h3 style="margin-top: 0;">←    트윗</h3>
+            <div class="twitterid" style="display:flex; align-items: center;">
+            <p style="width: 50%; margin-bottom: 0;">줏대있게살자/11월14~18일LDK<br><span style="font-size: 12px; opacity: 50%; width: 50%;">@getoutofmymind</span></p>
+            <span class="follow" style="border: solid 8px white; color: black; background-color: white; border-radius: 20px; font-weight: 1000; margin-left:25%;margin-rignt: 5px font-size 11px">팔로우</span> <span style="margin-left: 5px;">···</span>
+          </div> <br>
+          
+            <div class="twit" style="line-height: 26px;">
+              마이코시스가 제공하는 ‘완벽한 평등’의 대가는 사실 자아의 소멸임. 발언을 금지하고, '동일성'만을 강요해. 결국 자유를 서서히 잃어가고 있는 거지... 처음엔 편해 보일지 몰라도, 사실 이건 아주 무서운 일임.<br> 가끔은 갈등이 필요하다는 걸 잊지 말자.
+            <br>
+            <br>
+          </div>
+
+            <div style="font-size: 12px; opacity: 50%;"> 
+              방금 전 · <span id="current-date"></span> 
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id='eight' class="chrome-window shadow" style="height: 300px;">
+        <div class="popup">
+        <div class="top-bar">
+          <div class="buttons">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          <div class="address-bar">https://transmission.com</div>
+          <div class="mold-container">
+            <canvas id="moldCanvas"></canvas>
+        </div>
+        </div>
+        
+        <!-- 내용 -->
+      </div>
+      </div>
+
+
+      <div id='nine' class="chrome-window shadow">
+        <div class="popup">
+        <div class="top-bar" style="justify-content: start;">
+          <div class="buttons">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          <div class="address-bar">https://SEAN.news.com</div>
+        </div>
+        <div class="scroll">
+        <!-- 내용 --> 
+        <div class="content st9">
+          <h1 style="color: white; text-align: center; margin-bottom: 40px;">
+          최고의 나라, 마이코시스? 완벽한 평등과 평화는 무엇인가
+        </h1>
+
+          <section class="wrapper">
+
+            <p>
+              <div class="image">
+                <img src="computer.webp">
+                 <div class="eng" style="font-weight: 300;">
+                  <h5 style="margin: 0%; font-stretch: condensed; font-weight: 400;">
+                    2024, November 15. 
+                    <span style="font-style: italic;">
+                      Mycosis The best wolrd?
+                    </span>
+                    . Social Equality Association News.com
+                  </h5>
+                   <br>
+                   <b style="font-weight: 400; font-stretch: condensed; font-style: italic;">
+                    "A Society of Perfect Equality and Peace, Concealing the Loss of Self"
+                  </b><br>
+              ㅤIn the Republic of Mycosis, peace and equality are fully realized without conflict or division. Every citizen lives in safety, free from friction or difference in their daily lives. At first glance, this harmonious, uniform society resembles an ideal utopia. Yet beneath this controlled harmony 
+              <span style="text-decoration: underline; color: white;"> 
+                a quiet cost: the gradual erosion of the self, a weakening of critical thought, and a loss of individual awareness.
+              </span>
+               <br>
+              
+              ㅤAs the government pursues equality, it simultaneously enforces uniformity, stifling individuality. Mysterious entities known as ‘Molder’ and ‘Mold’ manage citizens' emotions, thoughts, and behaviors, not just to shield society from division but to erase traces of the individual self. Every citizen is molded into a "uniform identity," achieving "equality" in a way that prevents social conflict but sacrifices the questioning and challenging spirit of humanity.<br><br>
+              
+              <b style="font-weight: 400; font-stretch: condensed; font-style: italic;">
+                Warn of the Dangers of Passive Existence
+              </b><br><br>
+              
+              ㅤSocial psychologists caution that Mycosis’s citizens are falling into mental passivity, losing their capacity for critical thinking. In an environment devoid of difference and conflict, people lack the experience of finding and asserting their own perspectives. Studies suggest that in this oppressive environment, citizens experience apathy and emotional desensitization, while anxiety and emotional isolation grow beneath the surface. “There is no conflict in this society, but also no passion, growth, or individual self,” says Dr. Lo, an expert in the study of identity and freedom.<br>
+              
+              ㅤAs the citizens of Mycosis live within controlled equality, society begins to ask itself: Can true peace be achieved at the cost of human individuality?
+            </div>
+          </div>
+          <div class="thick">
+            <h2>
+              "완벽한 
+              <span style="background-color: #D9E2E6; color: black;">
+                평등</span>
+              과 평화의
+              <span style="background-color: #D9E2E6; color: black;">
+                사회</span>
+                , 그 이면에 숨겨진 
+              <span style="background-color: #D9E2E6; color: black;">
+              자아</span>
+              의 상실"
+            </h2><br><br>
+            ㅤ마이코시스 공화국에서는 갈등과 분열이 없는 평화와 평등이 완전히 실현되었다. 모든 시민은 안전하게 보호받으며, 마찰과 차이가 없는 일상 속에서 살아간다. 표면적으로 이 평화롭고 균일한 사회는 이상적인 유토피아처럼 보인다. 하지만, 이 통제된 조화 이면에는 점차 
+            <span style="text-decoration: underline; color: white;">
+              희미해지는 자아, 비판적 사고의 약화, 그리고 자각의 상실
+            </span>
+            이라는 조용한 대가가 숨어 있다.
+            <br>
+          
+            ㅤ정부가 평등을 추구하며 동시에 균일함을 강요하면서, 개인의 개성은 점차 억압되고 있다. ‘Molder’와 ‘Mold’라 불리는 자아를 잃은 존재들이 시민들의 감정과 생각, 행동을 관리하며, 분열로부터 사회를 지키는 대신 자아의 흔적을 서서히 지워가고 있다. 모든 시민이 같은 틀에 맞추어져 “동일성” 속에서 “평등”을 이루어가는 과정은 사회의 갈등을 방지하는 동시에, 질문하고 도전하는 인간성을 잃게 만든다.<br><br>
+
+          <b style="font-style: italic;">
+            전문가들, “수동적 존재의 위험성” 경고
+          </b>
+          <br><br>
+
+          ㅤ사회 심리학자들은 마이코시스의 시민들이 정신적 수동성에 빠지면서 비판적 사고 능력을 잃어가고 있다고 경고한다. 차이와 갈등이 없는 환경에서 스스로 생각하고 반박하며 자신의 입장을 찾는 경험이 사라지면서, 사람들은 점차 자신의 가치와 정체성에서 멀어지고 있다. 연구에 따르면, 이러한 억압된 환경에서 시민들은 무기력과 감정적 둔감증을 경험하고 있으며, 이는 수면 아래에서 불안과 정서적 고립감을 키우고 있다. "이 사회는 분명 갈등이 없지만, 열정도 성장도 자아도 없는 사회입니다,"라고 자아와 자유 연구 전문가인 이퀄 박사는 지적한다.<br>
+
+          ㅤ이처럼 마이코시스의 시민들이 통제된 평등 속에서 살아가는 동안, 사회는 질문을 던지고 있다: 인간성을 희생한 ‘완전한 평등’이 과연 진정한 평화의 조건이 될 수 있을까?
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="eng">
+        Dr_Equal@SEAN.com
+        </div>
+        <span class="eng">
+        Copyright © </span>사회평등연합뉴스.
+          <img src="">
+        </span>
+      </p>
+    </section>
+
+      </div>
+      </div>
+      </div>
+    </div>
+
+
+    <div id='ten' class="chrome-window shadow">
+      <div class="popup">
+      <div class="top-bar">
+        <div class="buttons">
+          <div class="close-button"></div>
+          <div class="minimize-button"></div>
+          <div class="maximize-button"></div>
+        </div>
+        <div class="address-bar">https://cheongwon.go.kr/mycosis</div>
+      </div>
+
+      <!-- 내용 -->
+       <div class="scroll">
+      <div class="content st10" style="padding: 30px;">
+        <h2>마이코시스 공화국의 위험한 사회 실험에 대한 전면적인 조사 촉구 청원 <br></h2>
+        <div style="display: flex;">
+        <P style="font-size: small; text-align:left; width: 100%;">Request for a Comprehensive Investigation into the Dangerous Social Experiment of the Mycosis Republic</P>  
+        <P style="font-size: small; text-align:right; width: 15%;"><br>조회 수 2</P>
+      </div>
+        <hr style="margin-top: 10px; margin-bottom:10px; width:100%;"> 
+        <div style="display: flex;">
+        <p style="width: 60%; margin-right: 15px; line-height: 26px;">
+          존경하는 국민 여러분, <br>그리고 당국 관계자분들께 청원드립니다.<br>
+
+          ㅤ최근 마이코시스 공화국의 '완벽한 평등'이라는 이름 하에 시행되는 사회적 통제와 감시가 심각한 인권 침해와 자아의 상실을 초래하고 있습니다. 이 사회는 갈등과 분열을 막는다며 모든 시민의 생각과 감정을 동일하게 만들어 가고 있으며, 그 결과로 개인의 자율성과 비판적 사고는 점점 약화되고 있습니다.<br><br>
+          
+          ㅤ특히, 마이코시스 내에서는 'Molder'와 'Mold'로 불리는 상태의 사람들이 체계적인 감시 시스템으로 시민들의 감정과 사고를 제어하고, 그들의 자아를 서서히 지워가고 있습니다. 끊임없이 순환하며 전염되는 이는 개인의 다양성을 억압하고, 오직 통제된 ‘평등’과 ‘평화’만을 강요하는 위험한 사회 실험이라 볼 수 있습니다.<br><br>
+          
+          ㅤ이에 우리는 마이코시스의 사회 통제 시스템에 대한 전면적 조사와 함께, 시민의 자율적 사고와 개성을 보장하는 방안을 마련할 것을 강력히 요청드립니다. 마이코시스의 정책은 단순히 이상 사회를 향한 실험이 아닌, 자유와 자아를 위협하는 잔혹한 현실이 되고 있습니다. 국민들의 목소리에 귀 기울여 주시기를 바랍니다.</p>
+          
+          <p class="eng" style="font-weight: 300; width: 50%;">
+
+
+            ㅤWe submit this petition to address the alarming social experiment taking place in the Mycosis Republic under the guise of “perfect equality.”<br><br>
+
+            ㅤThe Republic of Mycosis has implemented measures that supposedly prevent conflict and division, but these measures come at a high cost to personal freedom and identity. This society forces all citizens to adopt the same thoughts and emotions, gradually erasing individual autonomy and critical thinking.<br><br>
+
+            ㅤSpecifically, Mycosis uses a surveillance system called "Molder" and "Mold" to monitor and manipulate the emotions and thoughts of its people, slowly erasing any trace of personal identity. This system suppresses individuality and forces citizens into a restrictive mold of “equality” and “peace,” representing a severe threat to personal freedom.<br><br>
+
+            ㅤWe therefore demand a full investigation into the social control mechanisms of Mycosis, as well as measures to protect individual autonomy and diversity of thought. The policies of Mycosis are no longer an idealistic social experiment but have become a grim reality that endangers freedom and personal identity. Please listen to the voices of the people.
+        </p>
+      </div>
+          <p style="text-align: right; opacity: 30%; font-size: small;">의견 수렴 기간 : 2024.11.15.~2024.11.18.<br> 의견 제출 방법 : ???</p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+  <div id='link' class="chrome-window shadow ">
+    <div class="popup">
+    <div class="top-bar">
+      <div class="buttons">
+        <div class="close-button"></div>
+        <div class="minimize-button"></div>
+        <div class="maximize-button"></div>
+      </div>
+      <div class="address-bar">https://arrival-card.com</div>
+    </div>
+
+    <!-- 내용 --> 
+    <div class="content st11">
+      <img src="입국신청서.png">
+      
+    </div>
+  </div>
+</div>
+
+
+      <div id="final">
+        <div id="pointer">
+        <img src="text.png" style="width:120px" onclick="hideBackground()"> <br>
+        readme.txt
+        </div>
+        <div class="empty hidden" id="empty">
+        <div class="txtfile shadow" id="txtfile">
+        <div class="header">
+          <div class="buttons">
+            <div class="close-button"></div>
+            <div class="minimize-button"></div>
+            <div class="maximize-button"></div>
+          </div>
+          <div class="filename"><img src="text.png" style="width:20px; margin-right:5px;">readme.txt</div>
+      </div>
+      <div class="text-file">
+          <div class="text-body">
+  안녕하세요, <div class="showData"></div>님. 
+  <a href="#1" id="mycosisLink">Mycosis.com</a>
+  위 링크를 눌러 Mycosis 시민권을 등록해 보세요. 
+
+  삶이 무력해진 <div class="showData"></div>님에게. 
+          </div>
+      </div>
+      </div>
+     </div>
+    </div>
+    <!-- 자바 -->
+    <script src="popup.js"></script>
+
+</body>
+</html>

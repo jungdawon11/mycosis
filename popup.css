@@ -1,0 +1,1069 @@
+body {
+  font-family: 'suit', 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#nomargin {
+  margin-top: 2%;
+}
+#current-time {
+  color: #3a3a3a;
+}
+.chat-aline{
+  position: fixed;
+  margin-top: 45px;
+  margin-right: 15px;
+  padding-left: 2px;
+}
+
+.message-aline{
+
+}
+
+.shadow-stroked-text {
+  font-size: 30px;
+  color: rgb(0, 0, 0); /* 글자 색 */
+  filter: drop-shadow(-2px -2px 0 rgb(255, 255, 255))
+          drop-shadow(2px -2px 0 rgb(255, 255, 255))
+          drop-shadow(-2px 2px 0 rgb(255, 255, 255))
+          drop-shadow(2px 2px 0 rgb(255, 255, 255));
+  position: relative;
+  z-index: 1; /* 텍스트가 스트로크 위에 오도록 */
+}
+
+.hide{
+  background-color: #DDE4E8;
+  font-style: italic;
+}
+
+.showData {
+
+  display: inline-block;
+}
+
+#littlemargin {
+  margin-top: 5%;
+  border: none; /* 기본 테두리 제거 */
+  border-top: 0.4px solid rgb(255, 255, 255);
+}
+
+p {
+    hyphens: auto; /* 자동으로 하이픈 삽입 */
+    word-break: keep-all;
+    text-align: left;
+    line-height: 22px;
+}
+
+b{
+ 
+}
+
+b #leftaline{
+  text-align: left;
+}
+
+.small {
+  font-size: 8px;
+  color: #7A7A79;
+  font-style: italic;
+
+}
+
+#final {
+
+}
+
+.captcha-text {
+  color: #000000;
+}
+
+.captcha-text .rotate {
+  transform: rotate(15deg);
+  display: inline-block;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.captcha-text .skew {
+  transform: skewX(-10deg);
+  display: inline-block;
+}
+
+.image{
+  width: 80%;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.thick {
+  font-size: 16px;
+  line-height: 26px;
+  width: 90%;
+  text-align: left;
+}
+.wrapper {
+  position: relative;
+  padding: 0px 50px;
+  color: #fff;
+  display: flex;
+}
+.wrapper .content {
+  word-break: break-all;  /* 줄바꿈을 음절로 변경 */
+}
+
+
+h2 {
+  display: block;
+  margin-block-start: 0.2em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+img {
+  width: 100%;
+}
+
+hr {
+  margin-top: 10%;
+  margin-bottom: 4%;
+}
+
+.icon {
+  margin: 10px 0px 0px 11px;
+  width: 16%;
+  display: inline-block;
+  clear: both;
+}
+
+.right-slide{
+  max-width: 16%;
+  float: right;
+  display: inline-block;
+  justify-content: flex-start;
+  background-position: center;
+  position: fixed;
+  top: 16px;
+  right: 0;
+}
+
+.left-slide{
+  display: inline-block;
+  justify-content: flex-start;
+  background-position: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  background-color: #ffffff;
+  z-index: 4; 
+}
+
+/* 알림창 스타일 */
+.notification {
+  padding: 18px 10px 10px 10px;
+  width: 400px;
+  margin: 10px;
+  position: fixed;
+  margin: auto;
+  clear: both;
+  font-size: 15px;
+  border-radius: 12px;
+  border: 0.2px solid #00000051;
+  background-color: #f5f5f5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* 확인 버튼 스타일 */
+.btn {
+  padding: 10px 20px;
+  background-color: #434343;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13pt;
+  z-index: 5;
+  margin-bottom: 10px;
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.3);
+}
+
+.name {
+  display: flex;
+  color: #000000;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.select {
+  background-color: #337BF6;
+  border-radius: 6px;
+  padding: 16% 16px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.unselect {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+
+.talk {
+  align-items: center;
+  color: #3a3a3a;
+  font-size: 13px;
+  line-height: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.alam{
+  position: static;
+  display: flex;
+  float: right;
+  clear: both;
+  line-height: 2;
+  width: 100%;
+  padding: 8px 16px 12px 8px;
+  margin: 4px 23px;
+  background-color: #ffffffce;
+  border-radius: 16px;
+  text-wrap: balance;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+  opacity: 85%;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  animation: fadeInUp 1s ease-in-out forwards;
+  cursor: pointer;
+  border:solid #d4d4d4 0.1px;
+  z-index: 1;
+
+}
+
+.inline {
+  display: inline;
+}
+
+
+.alam.clicked {
+  animation: fadeOutUp 1s ease-in-out forwards;
+}
+
+
+.bottom {
+  position: absolute;
+  margin-left: 30px;
+  bottom :0px;
+  width: 100%;
+  display: flex;
+
+}
+
+.smile {
+  width: 2.6%;
+  margin-right: 10px;
+}
+
+.imessage{
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  border-top-right-radius: 8px; 
+  border-top-left-radius: 8px; 
+}
+
+.chat-container {
+  z-index: 0;
+  display: flex;
+  height: 100%;
+  text-wrap: balance;
+  outline: solid 0.2px #A9A9A9;
+  border-radius: 8px;
+}
+#plus{
+  padding: 10px 0px;
+  display: flex;
+  width: 100%;
+  display: flex;
+  gap: 7px;
+}
+.chat-list {
+  border-top: 2px solid #ffffffc3;
+  padding: 0px 20px 0px 8px;
+  background: #E0E0DF;
+  border-top-left-radius: 8px; 
+  border-bottom-left-radius: 8px; 
+  display: block;
+  border-right: 1px solid #BEBEBE;
+  text-wrap: balance;
+}
+
+.chat-window {
+  position : relative;
+  flex: 1;
+  height: 100%;
+  border-top-right-radius: 8px; 
+  border-bottom-right-radius:8px; 
+}
+
+.profile {
+  border-top: 2px solid #ffffffc3;
+  height: 20px;
+  padding: 15px 30px;
+  margin-bottom: 2%;
+  border-bottom: solid 1px #B8B8B7;
+  background-color: #F3F3F2;
+  display: flex;
+  border-top-right-radius: 8px; 
+  padding-top: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(75, 75, 75, 0.168);
+}
+
+#num {
+  font-size:11pt;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:#111111;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  margin: auto;
+}
+
+#number {
+  font-size: 13px;
+
+}
+.grey {
+  font-size: 13px;
+  color: #7A7A79;
+}
+.keyboard {
+  padding: 10px 2.5%;
+  padding-right: 80%;
+  margin: 15px 20px 15px 0px;
+  border-radius: 30px;
+  border: solid #DFDFDF 1px;
+  font-size: 13px;
+  color: #BDBDBD;
+  bottom: 0%;
+
+}
+
+.chat {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  color: rgb(0, 0, 0);
+  line-height: 2;
+  text-align: center;
+}
+
+.picture {
+  width: 45px;
+}
+/* 메세지 버블 */ 
+.sent {
+  background-color:rgb(0, 0, 0);
+  font-family: 'Black And White Picture';
+  line-height: 1.5;
+  display: inline-flex;
+  float: right;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 8%;
+  border-radius: 15px;
+}
+
+.received {
+  width: auto;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color:#E9E9EB;
+  border-radius: 11px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.animation-received {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+  animation: slideInFromBottom 0.5s ease-in-out forwards;
+}
+
+.animation-jiwon{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  animation: slideInFromBottom 0.5s ease-in-out forwards;
+  
+}
+.message-bubble {
+  display:inline-flex;
+  padding: 6px 15px;
+  margin: 5px 30px;
+  color: #242424;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: #e6e6e6;
+  margin-top:1px;
+}
+
+.today {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: rgb(154, 154, 154);
+  margin-bottom: 2.5%;
+}
+
+
+
+
+
+
+/* 팝업창 */
+.popup {
+  background-color: white;
+}
+
+.animate {
+  opacity: 1; /* 투명도를 1로 설정하여 보이게 함 */
+  visibility: visible; /* 보이게 설정 */
+  animation: scaleAnimation 1s forwards, fadeInUp 1s forwards;
+  }
+
+
+.chrome-window {
+  display: block; /* 요소는 기본적으로 공간을 차지하도록 설정 */
+      opacity: 0; /* 초기에 완전히 투명 상태 */
+  border-top: 2px solid #ffffff;
+  position: fixed;
+  border: 1px solid #00000022;
+  border-radius: 8px;
+  overflow: hidden;
+  align-items: center;
+  margin: auto;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+  animation: expandAnimation 0.5s ease-in-out forwards;
+}
+
+.scroll {
+  overflow-y: scroll;
+  height: 900px;
+}
+
+.top-bar {
+  background-color: #FAFAFA;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2px solid #B9B9B9;
+}
+
+  .buttons {
+    
+  display: flex;
+  gap: 7px;
+  padding-right: 7%;
+  padding-top:15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.buttons div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close-button {
+  position:relative;
+  background-color: #FF5F58;
+  border: solid 0.5px #E13D36;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.minimize-button {
+  background-color: #FEBC2C;
+  border: solid 0.5px #E0A024;
+}
+
+.maximize-button {
+  background-color: #28C840;
+  border: solid 0.5px #0DA922;
+}
+
+.address-bar {
+  width: 70%;
+  height: 20px;
+  background-color: #FAFAFA;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 15px;
+  padding: 4px;
+  margin-right: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-family:"American Typewriter";
+}
+
+.eng {
+  font-family:"American Typewriter";
+}
+
+.eng-fat {
+  font-family:"American Typewriter";
+}
+
+.content {
+  margin: auto;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  hyphens: auto;
+  line-height: 1.3;
+  box-shadow: 0px 2px 12px -9px grey inset;
+  font-family: "Nanum Myeongjo", serif;
+}
+.contentleft{
+  margin: auto;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  hyphens: auto;
+  line-height: 1.3;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.gif {
+  size: 300%;
+}
+
+.hyphens{
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+
+
+.st1{
+  background-color:#000000;
+  color: white;
+  text-align: left;
+  /*font-family: 'Sunflower';*/
+}
+
+.st2{
+  color:rgb(255, 255, 255);
+  background-color: #000000;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.st3{
+  background-color:#111111;
+}
+
+.st4{
+  flex-wrap: wrap;
+  background-color: #D9E2E6;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.st6 {
+  background-color: #D9E2E6;
+  color: rgb(0, 0, 0);
+  align-items: center;
+}
+
+.st7{
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.st8{
+  background-color: #000000;
+}
+
+.st9{
+  background-color: #000000;
+}
+
+.st10{
+  background-color: #D9E2E6;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.st11{
+
+}
+
+.colum {
+  display: flex;
+}
+/* 팝업창 크기 조절 */
+.hidden {
+  display: none;
+}
+
+.mold-container {
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9E2E6;
+  z-index: -1; /* 하단에 위치하도록 z-index 설정 */
+  position: absolute; /* z-index가 적용되도록 position 설정 */
+}
+
+#moldCanvas {
+  display: block;
+  position: absolute;
+  z-index: 1; /* canvas는 위에 오도록 z-index 설정 */
+}
+
+
+#one {
+    width: 300px;
+    top: 24%;
+    left: 24.5%;
+    position: fixed;
+}
+
+#two {
+    width: 500px;
+    top: 64%;
+    left: 12%;
+    position: fixed;
+    border-bottom: 10px solid #a3a3a3;
+    
+}
+
+#three {
+    width: 230px;
+    top: 13%;
+    left: 18%;
+    position: fixed;
+}
+
+
+#four {
+  width: 500px;
+  top: 8%;
+  left: 51%;
+  position: fixed;
+}
+
+#five {
+  width: 300px;
+  top: 44%;
+  left: 42%;
+  position: fixed;
+
+}
+
+#six {
+  width: 430px;
+  top: 60%;
+  left: 70%;
+  position: fixed;
+
+}
+
+#seven {
+  width: 400px;
+  top: 30%;
+  left: 7%;
+  position: fixed;
+
+}
+
+#eight {
+  width: 320px;
+  top: 30%;
+  left: 77%;
+  position: fixed;
+
+}
+
+#nine {
+  width: 50%;
+  bottom: 6.2%;
+  right: 5%;
+  position: fixed;
+  z-index: -1;
+
+}
+
+#ten {
+  width: 490px;
+  top: 5%;
+  left: 4%;
+  position: fixed;
+  z-index: -1;
+
+}
+
+#link {
+  width: 320px;
+  position: absolute;
+  top: 34%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.heart {
+  width: 28px;
+  height: 25px;
+  position: absolute;
+  background-image: url('mycosis_symbol_whtie.svg');
+  background-size: contain;
+  animation: float 5s linear infinite;
+  position: fixed;
+  z-index: -100;
+}
+
+#animationContainer {
+  width: 100%;
+  height: 100%;
+}
+
+
+.txtfile {
+  position: fixed;
+  top:auto;
+  left:auto;
+  position: fixed;
+  z-index: -999;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  margin: auto;
+  border-radius: 8px;
+  outline: solid 0.2px #A9A9A9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  border-top: 2px solid #ffffff;
+  border-bottom: solid 0.2px #A9A9A9;
+  background-color: #f6f6f6;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px 8px 0px 0px;
+  align-items: center;
+  display: flex;
+  top: 50%;
+  left: 50%;
+}
+
+.filename {
+  font-family: 'American Typewriter', sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin: 0px 20%;
+  display: flex;
+}
+.text-file {
+  box-shadow: 0px 2px 12px -9px grey inset;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space:inherit;
+  overflow: none;
+  border-radius: 0px 0px 8px 8px;
+}
+.text-body {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em auto;
+  text-align: left;
+  margin: 10px;
+}
+
+#pointer {
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  text-align: center;
+  z-index: -999;
+  color: white;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:visited { color:blue; }
+
+a:hover { color:red; }
+
+/* 이미지 크기 변경 */
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1); /* 초기 크기 */
+  }
+  100% {
+    transform: scale(1.5); /* 최종 크기 (1.5배 확대) */
+  }
+}
+
+
+@keyframes float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+/* 사라지는 애니메이션 */
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeInUpRight {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%); 
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandAnimation {
+  0% {
+    transform: scale(0); /* 크기 0% */
+    visibility: hidden;
+    opacity: 0; /* 투명도 0 */
+  }
+  100% {
+    transform: scale(1); /* 크기 100% */
+    visibility: visible;
+    opacity: 1; /* 투명도 1 */
+  }
+}
+
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 0;
+  }
+}
+
+.alam:nth-child(1) {
+  animation-delay: 1s;
+}
+.alam:nth-child(2) {
+  animation-delay: 1.1s;
+}
+.alam:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+
+.animation-received:nth-child(2) {
+  animation-delay: 1.9s;
+}
+.animation-received:nth-child(3) {
+  animation-delay: 2.6s;
+}
+.animation-received:nth-child(4) {
+  animation-delay: 4s;
+}
+.animation-received:nth-child(5) {
+  animation-delay: 5s;
+}
+.animation-received:nth-child(6) {
+  animation-delay: 3.3s;
+}
+.animation-received:nth-child(7) {
+  animation-delay: 3.5s;
+}
+
+
+.animation-jiwon:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.animation-jiwon:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.animation-jiwon:nth-child(3) {
+  animation-delay: 2.5s;
+}
+.animation-jiwon:nth-child(4) {
+  animation-delay: 4s;
+}
+.animation-jiwon:nth-child(5) {
+  animation-delay: 5s;
+}
+.animation-jiwon:nth-child(6) {
+  animation-delay: 6.2s;
+}
+.animation-jiwon:nth-child(7) {
+  animation-delay: 7s;
+}
+.animation-jiwon:nth-child(8) {
+  animation-delay: 10s;
+}
+
+/**
+.chrome-window:nth-child(6) {
+  animation-delay: 15.2s;
+}
+.chrome-window:nth-child(7) {
+  animation-delay: 7.2s;
+}
+.chrome-window:nth-child(8) {
+  animation-delay: 8s;
+}
+.chrome-window:nth-child(9) {
+  animation-delay: 6s;
+}
+.chrome-window:nth-child(10) {
+  animation-delay: 9.7s;
+}
+.chrome-window:nth-child(11) {
+  animation-delay: 10.3s;
+}
+.chrome-window:nth-child(12) {
+  animation-delay: 12s;
+}
+.chrome-window:nth-child(13) {
+  animation-delay: 10.9s;
+}
+.chrome-window:nth-child(13) {
+  animation-delay: 3s;
+}
+.chrome-window:nth-child(14) {
+  animation-delay: 11.4s;
+}
+.chrome-window:nth-child(15) {
+  animation-delay: 12.9s;
+}
+.chrome-window:nth-child(16) {
+  animation-delay: 14s;
+}
+

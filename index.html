@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Dokdo&display=swap" rel="stylesheet">
+    <title>Mycosis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="time-container" id="time-display"></div>
+
+    <div class="mold-container">
+        <canvas id="moldCanvas"></canvas>
+    </div>
+
+    <div id="container">
+        <div id="typing-area">
+            <input type="text" id="inputField" placeholder="암호 입력" autocomplete="off" maxlength="20" style="background-color: #7171718a; border: 3px solid #ffffff2b;"><br>
+            <p>별명 또는 이름 입력</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="captcha-container">
+        <p class="instruction">Enter the following:</p>
+        <div class="captcha-image">
+            <span class="captcha-text">마̧이<span class="rotate">코̊°시</span>스에̈́가<span class="skew">입합̊</span>니˛<span class="rotate">다</span>.</span>
+        </div>
+        <div class="answer-container">
+            <label for="inputfield">Your Answer</label>
+            <input type="text" placeholder=" 위 내용을 따라 적고, 가입 절차를 따르십시오." class="korean-text" id="answer">
+        </div>
+        <div class="solve-footer">
+            <span class="solve-text">Republic of <strong>Mycosis</strong></span>
+            <div class="captcha-controls">
+                <button>🔄</button>
+                <button>🔊</button>
+                <button>❔</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
