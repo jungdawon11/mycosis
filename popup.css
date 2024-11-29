@@ -1029,7 +1029,6 @@ a:hover { color:red; }
   animation-delay: 10s;
 }
 
-/**
 .chrome-window:nth-child(6) {
   animation-delay: 15.2s;
 }
